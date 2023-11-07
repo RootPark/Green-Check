@@ -1,0 +1,21 @@
+{
+  "name": "green-check",
+  "version": "1.0.0",
+  "description": "green check for git",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2",
+    "body-parser": "1.20.2",
+    "dotenv": "16.3.1",
+    "cors": "2.8.5",
+    "mysql2": "3.6.2",
+    "moment-timezone": "0.5.43",
+    "axios": "1.6.0"
+  }
+}

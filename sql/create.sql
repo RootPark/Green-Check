@@ -1,13 +1,13 @@
 DROP SCHEMA IF EXISTS greenCheck;
-CREATE SCHEMA IF NOT EXISTS login DEFAULT CHARACTER SET utf8;
-USE login;
+CREATE SCHEMA IF NOT EXISTS greenCheck DEFAULT CHARACTER SET utf8;
+USE greenCheck;
 
 -- -------------------------------------------
 
 DROP TABLE IF EXISTS greenCheck.user;
 
 CREATE TABLE IF NOT EXISTS greenCheck.user (
-	Id VARCHAR(20) NOT NULL AUTO_INCREMENT,
+	Id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(20),
     image VARCHAR(200),
     fine VARCHAR(10),

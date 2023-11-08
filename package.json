@@ -2,7 +2,7 @@
   "name": "green-check",
   "version": "1.0.0",
   "description": "green check for git",
-  "main": "index.js",
+  "main": "green-check.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

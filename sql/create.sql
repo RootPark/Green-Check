@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS greenCheck.user (
 	Id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(20),
     image VARCHAR(200),
-    fine VARCHAR(10),
+    fine VARCHAR(10) NOT NULL DEFAULT '0',
     created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     PRIMARY KEY(Id)
 );
@@ -26,3 +26,5 @@ CREATE TABLE IF NOT EXISTS greenCheck.commits (
 );
 
 -- -------------------------------------------
+
+INSERT INTO greenCheck.user(name, image) VALUES('rootPark', 'https://avatars.githubusercontent.com/u/43375122?v=4');

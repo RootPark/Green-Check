@@ -9,6 +9,7 @@ import cors from 'cors';
 import config from './config/config.js';
 import { consoleBar, timeLog } from './config/common.js';
 import { ping } from './controller/system.js';
+import { getUsers } from './lib/db.js';
 
 // ------------------ router set -----------------
 
@@ -22,6 +23,7 @@ const router = express.Router();
 // -------------------- api --------------------
 
 router.route('/ping').get(ping);
+router.route('/users').get(getUsers);
 
 // ---------------- server start -----------------
 

@@ -30,4 +30,4 @@ CREATE TABLE IF NOT EXISTS greenCheck.commits (
 -- -------------------------------------------
 
 INSERT INTO greenCheck.user(name, image) VALUES('rootPark', 'https://avatars.githubusercontent.com/u/43375122?v=4');
-INSERT INTO greenCheck.commits(Id, repo, created) VALUES('33214059375', 'RootPark/Green-Check', '2023-11-09T07:08:25Z');
+INSERT INTO greenCheck.commits(Id, userId, userName, repo, created) VALUES('33214059375', 'RootPark/Green-Check', '2023-11-09T07:08:25Z');

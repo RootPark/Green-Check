@@ -10,7 +10,7 @@ import config from './config/config.js';
 import { consoleBar, timeLog } from './config/common.js';
 import { ping } from './controller/system.js';
 import { getCommits, getDateCommits, getUsers, getuserCommits, getuserInfo } from './lib/db.js';
-import { postUserInfo } from './controller/gitApi.js';
+import { postDateCommits, postUserInfo } from './controller/gitApi.js';
 
 // ------------------ router set -----------------
 
@@ -30,6 +30,7 @@ router.route('/user-info').get(getuserInfo);
 router.route('/user-commits').get(getuserCommits);
 router.route('/date-commits').get(getDateCommits);
 router.route('/user-info').post(postUserInfo);
+router.route('/date-commits').post(postDateCommits);
 
 // ---------------- server start -----------------
 

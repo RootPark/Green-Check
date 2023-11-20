@@ -43,7 +43,7 @@ const postUserInfo = async (req, res) => {
 
     res.send(results);
     consoleBar();
-    timeLog('[POST] user-info called // ' + JSON.stringify(req.query) + '//' + JSON.stringify(results));
+    timeLog('[POST] user-info called // ' + JSON.stringify(req.body) + '//' + JSON.stringify(results));
 
 };
 

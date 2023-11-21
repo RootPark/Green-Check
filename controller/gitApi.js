@@ -90,12 +90,11 @@ const postDateCommits = async (req, res) => {
                 try {
                     for (let j = 0; j < specificCommits.length; j++) {
                         const Id = specificCommits[j].id;
-                        const userId = results.users[i].Id;
                         const repo = specificCommits[j].repo.name;
                         const created = moment(specificCommits[j].created_at).add(9, 'hours').toISOString();
 
                         try {
-                            await writeCommits(Id, userId, name, repo, created, results);
+                            await writeCommits(Id, name, repo, created, results);
                         } catch (err) {
                             results.result = false;
                             results.error.push('writeCommits Error : ' + err.message);

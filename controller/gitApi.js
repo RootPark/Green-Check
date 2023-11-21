@@ -79,6 +79,7 @@ const postDateCommits = async (req, res) => {
                 const response = await axios.get(url, {
                     headers: {
                         'Content-Type': 'application/json',
+                        'Authorization': process.env.GIT_AUTH_TOKEN,
                     },
                 });
 
@@ -150,6 +151,7 @@ const postDateCommitsAuto = async (year, month, date) => {
                 const response = await axios.get(url, {
                     headers: {
                         'Content-Type': 'application/json',
+                        'Authorization': process.env.GIT_AUTH_TOKEN,
                     },
                 });
 

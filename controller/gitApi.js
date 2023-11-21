@@ -33,12 +33,12 @@ const postUserInfo = async (req, res) => {
         } catch (err) {
             console.log(err)
             results.result = false;
-            results.error.push('writeUserInfo Error');
+            results.error.push('writeUserInfo Error : ' + err.message);
         }
 
     } catch (err) {
         results.result = false;
-        results.error.push('Git Api Error');
+        results.error.push('Git Api Error : ' + err.message);
     }
 
     res.send(results);
@@ -96,19 +96,15 @@ const postDateCommits = async (req, res) => {
 
                         try {
                             await writeCommits(Id, userId, name, repo, created, results);
-                            results.commits[j].id = Id;
-                            results.commits[j].userId = userId;
-                            results.commits[j].repo = repo;
-                            results.commits[j].created = created;
                         } catch (err) {
                             results.result = false;
-                            results.error.push('writeCommits Error');
+                            results.error.push('writeCommits Error : ' + err.message);
                         }
-                       
+
                     }
                 } catch (err) {
                     results.result = false;
-                    results.error.push('Error findout commits');
+                    results.error.push('Error findout commits : ' + err.message);
                 }
             } catch (err) {
                 results.result = false;
@@ -117,7 +113,7 @@ const postDateCommits = async (req, res) => {
         }
     } catch (err) {
         results.result = false;
-        results.error.push('Git Api Error');
+        results.error.push('Git Api Error : ' + err.message);
     }
 
     res.send(results);

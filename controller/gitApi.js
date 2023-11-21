@@ -96,6 +96,10 @@ const postDateCommits = async (req, res) => {
 
                         try {
                             await writeCommits(Id, userId, name, repo, created, results);
+                            results.commits[j].id = Id;
+                            results.commits[j].userId = userId;
+                            results.commits[j].repo = repo;
+                            results.commits[j].created = created;
                         } catch (err) {
                             results.result = false;
                             results.error.push('writeCommits Error');

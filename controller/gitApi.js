@@ -23,6 +23,7 @@ const postUserInfo = async (req, res) => {
         const response = await axios.get(url, {
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': process.env.GIT_AUTH_TOKEN,
             },
         });
 

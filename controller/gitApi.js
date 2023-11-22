@@ -189,9 +189,8 @@ const postDateCommitsAuto = async (year, month, date) => {
         results.error.push('Git Api Error : ' + err.message);
     }
 
-    res.send(results);
     consoleBar();
-    timeLog('[POST] date-commits called // ' + JSON.stringify(req.body) + '//' + JSON.stringify(results));
+    timeLog('[AUTO] automative update commits // ' + JSON.stringify(req.body) + '//' + JSON.stringify(results));
 };
 
 export { postUserInfo, postDateCommits, postDateCommitsAuto };
